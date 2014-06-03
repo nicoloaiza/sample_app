@@ -28,8 +28,7 @@ end
 
   describe "index" do
     let(:user) { FactoryGirl.create(:user) }
-
-    before do
+    before(:each) do
       sign_in user
       visit users_path
     end
@@ -73,7 +72,7 @@ end
       end
     end
 
-    
+
   end
 
   describe "signup" do
